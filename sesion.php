@@ -35,7 +35,7 @@ $courseid = required_param('courseid', PARAM_INT);
 $cmid = required_param('cmid', PARAM_INT);
 $nombre = required_param('nom', PARAM_TEXT);
 $sesion = required_param('ses', PARAM_TEXT);
-$sesionnorm = str_replace(' ', '', $sesion);
+$sesionnorm = str_replace([' ', '.', '_'], '', $sesion);
 $avatar = required_param('avatar', PARAM_TEXT);
 require_login($courseid);
 
