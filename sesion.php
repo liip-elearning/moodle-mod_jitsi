@@ -48,7 +48,7 @@ if (!has_capability('mod/jitsi:view', $context)) {
     notice(get_string('noviewpermission', 'jitsi'));
 }
 
-echo "<script src=\"https://meet.jit.si/external_api.js\"></script>\n";
+echo "<script src=\"https://".$CFG->jitsi_domain."/external_api.js\"></script>\n";
 echo "<script>\n";
 echo "var domain = \"".$CFG->jitsi_domain."\";\n";
 echo "var options = {\n";
